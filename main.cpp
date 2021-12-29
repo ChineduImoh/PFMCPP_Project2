@@ -15,13 +15,12 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
- 
- 
- 
- 
- 
- 
- 
+ int
+ float
+ bool
+ double
+ char
+ unsigned int
  
  
  
@@ -59,10 +58,35 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+
+    int playersOnline = 120;
+    int playlist = 12;
+    int age = 256;
+
+    float value = 14.1f;
+    float bitcoin = 1.4f;
+    float ethereum = 12.5f;
+
+    bool isOnline = true;
+    bool isOfline = false;
+    bool isPremium = true;
+
+    double grade = 5.0;
+    double doge = 0.3;
+    double solana = 15.6;
+
+    char alpha = 'a';
+    char beta = 'b';
+    char omega = 'o';
+
+    unsigned int prime = 3;
+    unsigned int inch = 27;
+    unsigned int width = 1920;
+
     
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, playersOnline, playlist, age, value, bitcoin, ethereum, isOnline, isOfline, isPremium, grade, doge, solana, alpha, beta, omega, prime, inch, width); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,43 +103,82 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int getStrIndex (char value)
+{ 
+    ignoreUnused(value);
+    return {};
+} 
 /*
  2)
  */
-
+bool checkCredential (int userIdentity)
+{ 
+    ignoreUnused(userIdentity);
+    return {};
+} 
 /*
  3)
  */
-
+int getAge (int dateOfBirth, int currentYear)
+{ 
+    ignoreUnused(dateOfBirth, currentYear);
+    return {};
+}
 /*
  4)
  */
-
+void acknowledge (bool value)
+{ 
+    ignoreUnused(value);
+}
 /*
  5)
  */
-
+int getResolution (int width = 1920, int height = 1080)
+{ 
+    ignoreUnused(width, height);
+    return {};
+}
 /*
  6)
  */
-
+int getArea (unsigned int breadth, int length = 10)
+{ 
+    ignoreUnused(breadth, length);
+    return {};
+}
 /*
  7)
  */
-
+int getEnergy (float mass, int speedOfLight = 299792458)
+{ 
+    ignoreUnused(mass, speedOfLight);
+    return {};
+}
 /*
  8)
  */
-
+int getSpeed (int distance, int time)
+{ 
+    ignoreUnused(distance, time);
+    return {};
+}
 /*
  9)
  */
-
+bool getIgnoranceLevel (double whatYouKnowYouDontKnow, double whatYouDontKnowYouDontKnow)
+{ 
+    ignoreUnused(whatYouKnowYouDontKnow, whatYouDontKnowYouDontKnow);
+    return {};
+}
 /*
  10)
  */
-
+int  getAverageVelocity(int displacement, int changeInTime)
+{ 
+    ignoreUnused(displacement, changeInTime);
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -136,27 +199,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    auto isPrime = getStrIndex('c');
     
     //2)
+    auto login = checkCredential(22622);
     
     //3)
+    auto age = getAge(2010, 2021);
     
-    //4)
+    //4)    
+    acknowledge(true);
     
-    //5)
+    //5)    
+    auto resolution = getResolution(1920, 1080);
     
-    //6)
+    //6)    
+    auto area = getArea(30,10);
     
-    //7)
+    //7)    
+    auto energy = getEnergy(9.9f, 299792458);
     
-    //8)
+    //8)    
+    auto speed = getSpeed(12, 160023);
     
-    //9)
+    //9)    
+    auto ignorance = getIgnoranceLevel(40000, 2147483647);
     
-    //10)
+    //10)   
+    auto averageVelocity = getAverageVelocity(120, 12);
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, isPrime, login, age, acknowledge, resolution, area, energy, speed, ignorance, averageVelocity);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
