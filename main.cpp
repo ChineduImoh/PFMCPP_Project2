@@ -103,9 +103,9 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-bool makeUserPrime (int userIdentity)
+int getStrIndex (char value)
 { 
-    ignoreUnused(userIdentity);
+    ignoreUnused(value);
     return {};
 } 
 /*
@@ -127,9 +127,9 @@ int getAge (int dateOfBirth, int currentYear)
 /*
  4)
  */
-void acknowledge (int userIdentity)
+void acknowledge (bool value)
 { 
-    ignoreUnused(userIdentity);
+    ignoreUnused(value);
 }
 /*
  5)
@@ -142,7 +142,7 @@ int getResolution (int width = 1920, int height = 1080)
 /*
  6)
  */
-int getArea (int breadth, int length = 10)
+int getArea (unsigned int breadth, int length = 10)
 { 
     ignoreUnused(breadth, length);
     return {};
@@ -150,7 +150,7 @@ int getArea (int breadth, int length = 10)
 /*
  7)
  */
-int getEnergy (int mass, int speedOfLight = 299792458)
+int getEnergy (float mass, int speedOfLight = 299792458)
 { 
     ignoreUnused(mass, speedOfLight);
     return {};
@@ -166,7 +166,7 @@ int getSpeed (int distance, int time)
 /*
  9)
  */
-bool getIgnorance (int whatYouKnowYouDontKnow, int whatYouDontKnowYouDontKnow)
+bool getIgnoranceLevel (double whatYouKnowYouDontKnow, double whatYouDontKnowYouDontKnow)
 { 
     ignoreUnused(whatYouKnowYouDontKnow, whatYouDontKnowYouDontKnow);
     return {};
@@ -199,7 +199,7 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    auto isPrime = makeUserPrime(22622);
+    auto isPrime = getStrIndex('c');
     
     //2)
     auto login = checkCredential(22622);
@@ -208,7 +208,7 @@ int main()
     auto age = getAge(2010, 2021);
     
     //4)    
-    acknowledge(22622);
+    acknowledge(true);
     
     //5)    
     auto resolution = getResolution(1920, 1080);
@@ -217,13 +217,13 @@ int main()
     auto area = getArea(30,10);
     
     //7)    
-    auto energy = getEnergy(999, 299792458);
+    auto energy = getEnergy(9.9f, 299792458);
     
     //8)    
     auto speed = getSpeed(12, 160023);
     
     //9)    
-    auto ignorance = getIgnorance(40000, 2147483647);
+    auto ignorance = getIgnoranceLevel(40000, 2147483647);
     
     //10)   
     auto averageVelocity = getAverageVelocity(120, 12);
